@@ -1,0 +1,13 @@
+h1 {
+  font-family: 'Overlock';
+  font-size: 60px;
+  letter-spacing: 5px;
+  font-stretch: expanded;
+}
+h2 {
+  font-family: 'Parisienne', cursive;
+}
+
+.container {
+  background-color: rgb(244, 24, 178);
+}
