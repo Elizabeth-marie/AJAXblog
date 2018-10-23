@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Life According to Elizabeth</title>
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <link href="https://fonts.googleapis.com/css?family=Overlock|Parisienne" rel="stylesheet">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-     <script src="myscript.js" charset="utf-8"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="center-align">Life According to Elizabeth</h1>
-      <h2 class="center-align">A blog about everything and nothing</h2>
+
+<head>
+  <meta charset="utf-8">
+  <title>Life According to Elizabeth</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Overlock|Parisienne" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="myscript.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="blogHeader" class="container">
+    <h1 class="center-align">Life According to Elizabeth</h1>
+    <h2 class="center-align">A blog about everything and nothing</h2>
+  </div>
+  <div class="container">
+    <table id="blogPosts" class="left-align">
+      <tbody id="blogPostsTable"></tbody>
+    </table>
+  </div>
+  <a id="modalB" class="waves-effect waves-light btn modal-trigger" href="#modal1">Add a Blog Post</a>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h2 class="center-align">Create a Post</h2>
+      <div class="row">
+        <form id="form" class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="title" type="text" class="validate" name="title">
+              <label for="title">Title</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="content" type="text" class="validate" name="content">
+              <label for="content">Content</label>
+            </div>
+          </div>
+          <div>
+            <button class="btn waves-effect waves-light" type="submit" id="submit-form"><i class="material-icons right">submit</i></button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="container">
-      <table id="blogPosts" class="left-align">
-        <tbody id="blogPostsTable"></tbody>
-      </table>
-    </div>
-  </body>
+  </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h2 class="center-align">View or Edit!</h2>
+        <div class="row">
+          <form id="editForm" class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="postId" type="hidden">
+                <input id="editTitle" type="text" class="validate">
+                <label for="title">Title</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="text-area col s6">
+                <input id="editContent" type="text" class="validate">
+                <label for="content">Content</label>
+              </div>
+            </div>
+            <div>
+              <button class="modal-close waves-effect waves-green btn-flat" type="submit" id="editSubmit"><i class="material-icons right">submit</i></button>
+            </div>
+          </form>
+
+</body>
+
 </html>

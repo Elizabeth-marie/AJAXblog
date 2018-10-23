@@ -8,6 +8,36 @@ h2 {
   font-family: 'Parisienne', cursive;
 }
 
-.container {
+#blogHeader {
   background-color: rgb(244, 24, 178);
+}
+
+.deleteButton {
+  margin: 8px;
+  background-color: rgb(4, 33, 81);
+  color: white;
+  font-family: 'Overlock';
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.editButton {
+  margin: 8px;
+  background-color: rgb(4, 33, 81);
+  color: white;
+  font-family: 'Overlock';
+  letter-spacing: 1px;
+  padding: 15px;
+}
+
+.title {
+  font-family: 'Parisienne';
+  margin: 15px;
+  font-size: 40px;
+}
+
+.content {
+  font-family: 'Overlock';
+  margin: 15px;
+  font-size: 20px;
 }
