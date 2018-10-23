@@ -92,7 +92,7 @@ function editPost() {
 
     let etitle = document.getElementById('editTitle')
     let econtent = document.getElementById('editContent')
-    let postId = document.getElementById('postId')
+    // let postId = document.getElementById('postId')
 
     const id = postId.getAttribute("data-id")
     axios.put(`/blog_post/${id}`, {
