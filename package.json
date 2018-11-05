@@ -2,8 +2,14 @@
   "name": "ajaxblog",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node":"v10.11.0"
+  },
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node  ./bin/www",
+    "knex": "knex",
+    "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
+    "nodemon": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
